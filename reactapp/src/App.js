@@ -57,14 +57,9 @@ const App = () => {
     const [score, setScore] = useState(0);
     const [showScore, setShowScore] = useState(false);
     const [showQuiz, setShowQuiz] = useState(false);
-    const [showStart, setShowStart] = useState(false);
-    const [questionsCorrect, setQuestionsCorrect] = useState(0);
+    
+    const [, setQuestionsCorrect] = useState(0);
 
-  const handleResultsButton = () => {
-      if(currentQuestion === 5){
-        setShowStart(true);
-      }
-  }  
     
    const handleQuizButton = () => {
         setShowQuiz(true);
