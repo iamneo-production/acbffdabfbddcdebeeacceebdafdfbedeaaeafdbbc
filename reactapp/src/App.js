@@ -1,55 +1,44 @@
 import React, { useState } from 'react';
 import {Banner} from './components/UI/Banner/Banner'
-// eslint-disable-next-line no-unused-vars
 import {Button} from './components/UI/Button/Button'
-// eslint-disable-next-line no-unused-vars
 import {card} from './components/UI/Card/Card'
 import './App.css'
 export default function App() {
 	const questions = [
 		{
-			questionText: 'Who is the father of your nation ?',
+			questionText: 'What is the capital of France?',
 			answerOptions: [
-				{ answerText: 'Mahatma Gandhi', isCorrect: true },
-				{ answerText: 'Jawaharlal Nehru', isCorrect: false },
-				{ answerText: 'Donald Trump', isCorrect: false },
-				{ answerText: 'Barrack Obama', isCorrect: false },
+				{ answerText: 'New York', isCorrect: false },
+				{ answerText: 'London', isCorrect: false },
+				{ answerText: 'Paris', isCorrect: true },
+				{ answerText: 'Dublin', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'What color is are the leaves ?',
+			questionText: 'Who is CEO of Tesla?',
 			answerOptions: [
-				{ answerText: 'Blue', isCorrect: false },
-				{ answerText: 'Red', isCorrect: false },
-				{ answerText: 'Yellow', isCorrect: false },
-				{ answerText: 'Green', isCorrect: true },
+				{ answerText: 'Jeff Bezos', isCorrect: false },
+				{ answerText: 'Elon Musk', isCorrect: true },
+				{ answerText: 'Bill Gates', isCorrect: false },
+				{ answerText: 'Tony Stark', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'What color is the sky ?',
+			questionText: 'The iPhone was created by which company?',
 			answerOptions: [
-				{ answerText: 'Blue', isCorrect: true },
-				{ answerText: 'Red', isCorrect: false },
-				{ answerText: 'Yellow', isCorrect: false },
-				{ answerText: 'Green', isCorrect: false },
+				{ answerText: 'Apple', isCorrect: true },
+				{ answerText: 'Intel', isCorrect: false },
+				{ answerText: 'Amazon', isCorrect: false },
+				{ answerText: 'Microsoft', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'What color is the sky ?',
+			questionText: 'How many Harry Potter books are there?',
 			answerOptions: [
-				{ answerText: 'Blue', isCorrect: true },
-				{ answerText: 'Red', isCorrect: false },
-				{ answerText: 'Yellow', isCorrect: false },
-				{ answerText: 'Green', isCorrect: false },
-			],
-		},
-		{
-			questionText: 'What color is the fire ?',
-			answerOptions: [
-				{ answerText: 'Blue', isCorrect: false },
-				{ answerText: 'Red', isCorrect: false },
-				{ answerText: 'Yellow', isCorrect: true },
-				{ answerText: 'Green', isCorrect: false },
+				{ answerText: '1', isCorrect: false },
+				{ answerText: '4', isCorrect: false },
+				{ answerText: '6', isCorrect: false },
+				{ answerText: '7', isCorrect: true },
 			],
 		},
 	];
@@ -61,10 +50,14 @@ export default function App() {
   //
   const [showButton, setShowButton]=useState(false);
   const [showQuiz, setShowQuiz]=useState(false);
- 
+  //const [showStart, setShowStart]=useState(false);
   const[, setQuestionsCorrect]=useState(0);
 
-
+  // const handleResultsButton =() => {
+  //   if(currentQuestion=== 5){
+  //     setShowStart(true);
+  //   }
+  // }
 
   const handleQuizButton =() => {
     setShowQuiz(true);
@@ -88,19 +81,19 @@ export default function App() {
   const handleScore =() =>{
     setShowScore(true);
   }
-//   const text =()=>{
-//     const nextQuestion=currentQuestion+1;
-//     if(nextQuestion === questions.length){
-//       return "Show Results"
-//     }
+  const text =()=>{
+    const nextQuestion=currentQuestion+1;
+    if(nextQuestion === questions.length){
+      return "show Results"
+    }
     
-//   }
+  }
 
   const resetQuiz = () => {
     setCurrentQuestion(0);
     setScore(0);
     setShowScore(false);
-    setShowButton(false);
+    setShowScore(false);
   }
 	return (
 		<div className='app'>
@@ -131,7 +124,7 @@ export default function App() {
 							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
             <div>
-            {showButton && <button id="qq" onClick={() => handleScore()}>Show Results</button>}</div>
+            {showButton && <button id="qq" onClick={() => handleScore()}>{text()}</button>}</div>
             </div>
             
             
