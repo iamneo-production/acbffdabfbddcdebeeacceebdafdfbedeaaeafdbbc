@@ -5,11 +5,11 @@ import './App.css'
 export default function App() {
 	const questions = [
 		{
-			questionText: 'What is the capital of France?',
+			questionText: 'Who is the father of your nation ?',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
+				{ answerText: 'Mahatma Gandhi', isCorrect: true },
+				{ answerText: 'Jawaharlal Nehru', isCorrect: false },
+				{ answerText: 'Donald Trump', isCorrect: true },
 				{ answerText: 'Dublin', isCorrect: false },
 			],
 		},
