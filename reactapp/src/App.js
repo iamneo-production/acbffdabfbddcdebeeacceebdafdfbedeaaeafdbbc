@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {Banner} from './components/UI/Banner/Banner';
-import {Button} from './components/UI/Button/Button';
-import {card} from './components/UI/Card/Card'
+
 import './App.css'
 export default function App() {
 	const questions = [
