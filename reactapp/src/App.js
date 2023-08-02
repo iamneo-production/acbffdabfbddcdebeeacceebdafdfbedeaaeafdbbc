@@ -84,7 +84,7 @@ export default function App() {
   const text =()=>{
     const nextQuestion=currentQuestion+1;
     if(nextQuestion === questions.length){
-      return "show Results"
+      return "Show Results"
     }
     
   }
@@ -103,7 +103,7 @@ export default function App() {
               {Banner}
             
 					You scored {score} out of {questions.length}
-          <div><button type="submit" onClick={resetQuiz}>Start Quiz</button></div>
+          <div><button type="submit" onClick={resetQuiz} text="Start Quiz">Start Quiz</button></div>
 				</div>
 			) : (
 				<>
