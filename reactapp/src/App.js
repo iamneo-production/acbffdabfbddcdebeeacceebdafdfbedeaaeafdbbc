@@ -79,13 +79,13 @@ export default function App() {
   const handleScore =() =>{
     setShowScore(true);
   }
-  const text =()=>{
-    const nextQuestion=currentQuestion+1;
-    if(nextQuestion === questions.length){
-      return "show Results"
-    }
+//   const text =()=>{
+//     const nextQuestion=currentQuestion+1;
+//     if(nextQuestion === questions.length){
+//       return "Show Results"
+//     }
     
-  }
+//   }
 
   const resetQuiz = () => {
     setCurrentQuestion(0);
@@ -122,7 +122,7 @@ export default function App() {
 							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
             <div>
-            {showButton && <button id="qq" onClick={() => handleScore()}>{text()}</button>}</div>
+            {showButton && <button id="qq" onClick={() => handleScore()}>Show Results </button>}</div>
             </div>
             
             
