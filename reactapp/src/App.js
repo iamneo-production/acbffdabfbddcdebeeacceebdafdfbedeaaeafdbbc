@@ -124,7 +124,7 @@ export default function App() {
 							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
             <div>
-            {showButton && <Button id="qq" onClick={() => handleScore()} text="Show Resultsw">{text()}</Button>}</div>
+            {showButton && <button id="qq" onClick={() => handleScore()} text="Show Results">{text()}</button>}</div>
             </div>
             
             
