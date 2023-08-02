@@ -53,11 +53,7 @@ export default function App() {
  
   const[, setQuestionsCorrect]=useState(0);
 
-  // const handleResultsButton =() => {
-  //   if(currentQuestion=== 5){
-  //     setShowStart(true);
-  //   }
-  // }
+
 
   const handleQuizButton =() => {
     setShowQuiz(true);
