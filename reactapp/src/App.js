@@ -10,34 +10,43 @@ export default function App() {
 				{ answerText: 'Mahatma Gandhi', isCorrect: true },
 				{ answerText: 'Jawaharlal Nehru', isCorrect: false },
 				{ answerText: 'Donald Trump', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
+				{ answerText: 'Barrack Obama', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'Who is CEO of Tesla?',
+			questionText: 'What color is are the leaves ?',
 			answerOptions: [
-				{ answerText: 'Jeff Bezos', isCorrect: false },
-				{ answerText: 'Elon Musk', isCorrect: true },
-				{ answerText: 'Bill Gates', isCorrect: false },
-				{ answerText: 'Tony Stark', isCorrect: false },
+				{ answerText: 'Blue', isCorrect: false },
+				{ answerText: 'Red', isCorrect: false },
+				{ answerText: 'Yellow', isCorrect: false },
+				{ answerText: 'Green', isCorrect: true },
 			],
 		},
 		{
-			questionText: 'The iPhone was created by which company?',
+			questionText: 'what color is the sky ?',
 			answerOptions: [
-				{ answerText: 'Apple', isCorrect: true },
-				{ answerText: 'Intel', isCorrect: false },
-				{ answerText: 'Amazon', isCorrect: false },
-				{ answerText: 'Microsoft', isCorrect: false },
+				{ answerText: 'Blue', isCorrect: true },
+				{ answerText: 'Red', isCorrect: false },
+				{ answerText: 'Yellow', isCorrect: false },
+				{ answerText: 'Green', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'How many Harry Potter books are there?',
+			questionText: 'what color is the sky ?',
 			answerOptions: [
-				{ answerText: '1', isCorrect: false },
-				{ answerText: '4', isCorrect: false },
-				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
+				{ answerText: 'Blue', isCorrect: true },
+				{ answerText: 'Red', isCorrect: false },
+				{ answerText: 'Yellow', isCorrect: false },
+				{ answerText: 'Green', isCorrect: false },
+			],
+		},
+		{
+			questionText: 'what color is the fire ?',
+			answerOptions: [
+				{ answerText: 'Blue', isCorrect: false },
+				{ answerText: 'Red', isCorrect: false },
+				{ answerText: 'Yellow', isCorrect: true },
+				{ answerText: 'Green', isCorrect: false },
 			],
 		},
 	];
@@ -95,7 +104,7 @@ export default function App() {
     setCurrentQuestion(0);
     setScore(0);
     setShowScore(false);
-    setShowScore(false);
+    setShowButton(false);
   }
 	return (
 		<div className='app'>
