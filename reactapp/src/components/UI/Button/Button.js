@@ -1,10 +1,7 @@
 import React from 'react'
-import { useState } from 'react';
 
-interface ButtonProps {
-    onClick: () => void;
-    text : String;
-}
+
+
 
 const ButtonFunc = (text) => {
     if(text === ""){
@@ -21,11 +18,10 @@ const ButtonFunc = (text) => {
 // };
 
 
-const Button = ({ onClick, children }) => {
-    return (
-      <button type="button" onClick={onClick}>
-        {children}
-      </button>
-    );
-  };
+
+const Button = (ButtonProps) => {
+  return (<button onClick = {ButtonProps.onClick}>{ButtonProps.children}</button>);
+}
+
+
 export default Button;

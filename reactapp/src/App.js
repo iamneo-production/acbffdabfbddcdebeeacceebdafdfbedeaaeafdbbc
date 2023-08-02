@@ -47,17 +47,13 @@ export default function App() {
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 
-  //
+  
   const [showButton, setShowButton]=useState(false);
   const [showQuiz, setShowQuiz]=useState(false);
-  //const [showStart, setShowStart]=useState(false);
+ 
   const[, setQuestionsCorrect]=useState(0);
 
-  // const handleResultsButton =() => {
-  //   if(currentQuestion=== 5){
-  //     setShowStart(true);
-  //   }
-  // }
+
 
   const handleQuizButton =() => {
     setShowQuiz(true);
@@ -88,6 +84,13 @@ export default function App() {
     }
     
   }
+  const Button = ({ onClick, children }) => {
+    return (
+      <button type="button" onClick={onClick}>
+        {children}
+      </button>
+    );
+  };
 
   const resetQuiz = () => {
     setCurrentQuestion(0);
