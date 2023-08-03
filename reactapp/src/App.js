@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Banner} from './components/UI/Banner/Banner';
-import {Button} from './components/UI/Button/Button'
+//import {Button} from './components/UI/Button/Button';
 import './App.css'
 export default function App() {
 	const questions = [
@@ -92,13 +92,13 @@ export default function App() {
     }
     
   }
-//   const Button = ({ onClick, children }) => {
-//     return (
-//       <button type="button" onClick={onClick}>
-//         {children}
-//       </button>
-//     );
-//   };
+  const Button = ({ onClick, children }) => {
+    return (
+      <button type="button" onClick={onClick}>
+        {children}
+      </button>
+    );
+  };
 
   const resetQuiz = () => {
     setCurrentQuestion(0);
